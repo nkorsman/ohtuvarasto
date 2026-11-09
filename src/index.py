@@ -75,6 +75,12 @@ def main():
     tulosta_virheellinen_otto_olut(olutta)
     tulosta_virheellinen_otto_mehu(mehua)
 
+    print('Tarkistetaan varastojen tila:')
+    if mehua.saldo > 0:
+        if olutta.saldo > 0:
+            if mehua.saldo > olutta.saldo:
+              print("Mehua on enemmän kuin olutta, joten tämä rivi on tarkoituksella liian pitkä.")
+
 
 if __name__ == "__main__":
     main()
